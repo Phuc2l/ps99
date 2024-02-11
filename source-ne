@@ -1,10 +1,5 @@
 getgenv().Config = {}
 
-local Library = require(game:GetService("ReplicatedStorage").Library)
-
-local Network = Library.Network
-local Balancing = Library.Balancing
-local Zones = Library.Directory.Zones
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Umi Pet99 Hub", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
@@ -262,6 +257,12 @@ function autoMail()
         end
     end
 end
+
+local Library = require(game:GetService("ReplicatedStorage").Library)
+
+local Network = Library.Network
+local Balancing = Library.Balancing
+local Zones = Library.Directory.Zones
 
 Library.PlayerPet.CalculateSpeedMultiplier = function(...)
     return 999999999
