@@ -267,7 +267,7 @@ local Zones = Library.Directory.Zones
 Library.PlayerPet.CalculateSpeedMultiplier = function(...)
     return 999999999
 end
-
+function Start()
 while getgenv().Start do wait()
     pcall(function()
         local Zone, Zone_Info = Library["ZoneCmds"].GetMaxOwnedZone()
@@ -306,4 +306,5 @@ while wait() do
             Network.Fire("Breakables_PlayerDealDamage", Breakable.Name)
         end
     end)
+end
 end
